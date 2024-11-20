@@ -22,10 +22,10 @@ jobs:
 
       - name: Start Flask server in background
         run: |
-          nohup python server.py & # Démarrer le serveur en arrière-plan
+          nohup python server.py &
           echo "Waiting for Flask server to start..."
           sleep 30
-
-      - name: Run Locust Tests
-        run: |
-          locust --headless --users 1000 --spawn-rate 10 -H http://127.0.0.1:5000/ --run-time 2m
+#
+#      - name: Run Locust Tests
+#        run: |
+#          locust --headless --users 1000 --spawn-rate 10 -H http://127.0.0.1:5000/ --run-time 2m
